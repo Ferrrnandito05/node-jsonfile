@@ -78,11 +78,15 @@ function writeFileSync (file, obj, options = {}) {
   return fs.writeFileSync(file, str, options)
 }
 
+const escribir = writeFileSync
+
 const jsonfile = {
   readFile,
+  LeerArchivo : readFile, //Cambie el nombre de readFile a LeerArchivo
   readFileSync,
   writeFile,
-  writeFileSync
+  writeFileSync,
+  escribir
 }
 
 module.exports = jsonfile
